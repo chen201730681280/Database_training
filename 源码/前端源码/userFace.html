@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> 用户头像</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var url = decodeURI(window.location.href);
+            var userName = url.split("&userName=")[1];
+            var argsIndex = (url.split("&userName=")[0]).split("?userId=");
+            var userId = argsIndex[1];
+            var temp = [];
+            for(var i = 1; i<=50; i++){
+                temp[i] = "#userFace" + i;
+                $(temp[i]).click(function(){
+                    $.ajax({
+                        url: "http://207.148.112.5:8080/user/modifyUserFace",
+                            data: {
+                                userId: userId,
+                                newUserFace: $(this).attr("src"),
+                            },
+                            type: "POST",
+                            dataType: "json",
+                            success: function(data){
+                                if(data.success === true)
+                                    alert("修改成功");
+                                var url = "./editUserDetail.html?userName=" + userName;
+                                url = encodeURI(url);
+                                window.location.href = url;
+                            }
+                    })
+                });
+            }
+
+                
+
+            }
+        );
+    </script>
+</head>
+    <body>
+            <img id="userFace1"  src="http://207.148.112.5/images/1.jpg"  height="100" width="100"></img>
+            <img id="userFace2"  src="http://207.148.112.5/images/2.jpg"  height="100" width="100"></img>
+            <img id="userFace3"  src="http://207.148.112.5/images/3.jpg"  height="100" width="100"></img>
+            <img id="userFace4"  src="http://207.148.112.5/images/4.jpg"  height="100" width="100"></img>
+            <img id="userFace5"  src="http://207.148.112.5/images/5.jpg"  height="100" width="100"></img>
+            <img id="userFace6"  src="http://207.148.112.5/images/6.jpg"  height="100" width="100"></img>
+            <img id="userFace7"  src="http://207.148.112.5/images/7.jpg"  height="100" width="100"></img>
+            <img id="userFace8"  src="http://207.148.112.5/images/8.jpg"  height="100" width="100"></img>
+            <img id="userFace9"  src="http://207.148.112.5/images/9.jpg"  height="100" width="100"></img>
+            <img id="userFace10"  src="http://207.148.112.5/images/10.jpg"  height="100" width="100"></img>
+            <br/>
+            <img id="userFace11" src="http://207.148.112.5/images/11.jpg"  height="100" width="100"></img>
+            <img id="userFace12" src="http://207.148.112.5/images/12.jpg"  height="100" width="100"></img>
+            <img id="userFace13" src="http://207.148.112.5/images/13.jpg"  height="100" width="100"></img>
+            <img id="userFace14" src="http://207.148.112.5/images/14.jpg"  height="100" width="100"></img>
+            <img id="userFace15" src="http://207.148.112.5/images/15.jpg"  height="100" width="100"></img>
+            <img id="userFace16" src="http://207.148.112.5/images/16.jpg"  height="100" width="100"></img>
+            <img id="userFace17" src="http://207.148.112.5/images/17.jpg"  height="100" width="100"></img>
+            <img id="userFace18" src="http://207.148.112.5/images/18.jpg"  height="100" width="100"></img>
+            <img id="userFace19" src="http://207.148.112.5/images/19.jpg"  height="100" width="100"></img>
+            <img id="userFace20" src="http://207.148.112.5/images/20.jpg"  height="100" width="100"></img>
+            <br/>
+            <img id="userFace21" src="http://207.148.112.5/images/21.jpg"  height="100" width="100"></img>
+            <img id="userFace22" src="http://207.148.112.5/images/22.jpg"  height="100" width="100"></img>
+            <img id="userFace23" src="http://207.148.112.5/images/23.jpg"  height="100" width="100"></img>
+            <img id="userFace24" src="http://207.148.112.5/images/24.jpg"  height="100" width="100"></img>
+            <img id="userFace25" src="http://207.148.112.5/images/25.jpg"  height="100" width="100"></img>
+            <img id="userFace26" src="http://207.148.112.5/images/26.jpg"  height="100" width="100"></img>
+            <img id="userFace27" src="http://207.148.112.5/images/27.jpg"  height="100" width="100"></img>
+            <img id="userFace28" src="http://207.148.112.5/images/28.jpg"  height="100" width="100"></img>
+            <img id="userFace29" src="http://207.148.112.5/images/29.jpg"  height="100" width="100"></img>
+            <img id="userFace30" src="http://207.148.112.5/images/30.jpg"  height="100" width="100"></img>
+            <br/>
+            <img id="userFace31" src="http://207.148.112.5/images/31.jpg"  height="100" width="100"></img>
+            <img id="userFace32" src="http://207.148.112.5/images/32.jpg"  height="100" width="100"></img>
+            <img id="userFace33" src="http://207.148.112.5/images/33.jpg"  height="100" width="100"></img>
+            <img id="userFace34" src="http://207.148.112.5/images/34.jpg"  height="100" width="100"></img>
+            <img id="userFace35" src="http://207.148.112.5/images/35.jpg"  height="100" width="100"></img>
+            <img id="userFace36" src="http://207.148.112.5/images/36.jpg"  height="100" width="100"></img>
+            <img id="userFace37" src="http://207.148.112.5/images/37.jpg"  height="100" width="100"></img>
+            <img id="userFace38" src="http://207.148.112.5/images/38.jpg"  height="100" width="100"></img>
+            <img id="userFace39" src="http://207.148.112.5/images/39.jpg"  height="100" width="100"></img>
+            <img id="userFace40" src="http://207.148.112.5/images/40.jpg"  height="100" width="100"></img>
+            <br/>
+            <img id="userFace41" src="http://207.148.112.5/images/41.jpg"  height="100" width="100"></img>
+            <img id="userFace42" src="http://207.148.112.5/images/42.jpg"  height="100" width="100"></img>
+            <img id="userFace43" src="http://207.148.112.5/images/43.jpg"  height="100" width="100"></img>
+            <img id="userFace44" src="http://207.148.112.5/images/44.jpg"  height="100" width="100"></img>
+            <img id="userFace45" src="http://207.148.112.5/images/45.jpg"  height="100" width="100"></img>
+            <img id="userFace46" src="http://207.148.112.5/images/46.jpg"  height="100" width="100"></img>
+            <img id="userFace47" src="http://207.148.112.5/images/47.jpg"  height="100" width="100"></img>
+            <img id="userFace48" src="http://207.148.112.5/images/48.jpg"  height="100" width="100"></img>
+            <img id="userFace49" src="http://207.148.112.5/images/49.jpg"  height="100" width="100"></img>
+            <img id="userFace50" src="http://207.148.112.5/images/50.jpg"  height="100" width="100"></img>
+            <br/>
+    </body>
+</html>
