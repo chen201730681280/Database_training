@@ -18,7 +18,6 @@ require ('./assets/iconfont/iconfont.js')
 
 Vue.use(ElementUI) //使用elementUI
 
-
 Vue.config.productionTip = true
 
 /* eslint-disable no-new */
